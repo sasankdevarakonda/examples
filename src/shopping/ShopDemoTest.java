@@ -20,15 +20,11 @@ public class ShopDemoTest {
         products.add(shirtProduct);
         shop.products = products;
 
-        // User input
-        String userInputType = "Shirt";
-        String userInputColor = "Blue";
-        int userSize=40;
 
         // Find product
-        Product foundProduct = shop.findProduct(userInputType,userInputColor,userSize);
+        Product foundProduct = shop.findProduct("Shirt","Blue",40);
         if (foundProduct != null) {
-            System.out.println("Matching product found: " + foundProduct.type + " (Color: " + foundProduct.productSpecification.color + ")  " +"Size : "+foundProduct.productSpecification.size);
+            System.out.println("Matching product found: " + foundProduct.type + " (Color: " + foundProduct.productSpecification.color + ") "+ " Size : "+foundProduct.productSpecification.size);
         } else {
             System.out.println("No matching product found.");
         }
